@@ -48,9 +48,9 @@ open_items:
 ## Active Workstreams
 | WS | Name | Branch | Status |
 |----|------|--------|--------|
-| WS-001 | Fork Setup & Upstream Remote | `ws/001-fork-setup` | 🟡 Active |
-| WS-002 | Strip China Platform Integrations | `ws/002-china-strip` | 🔵 Planning |
-| WS-003 | Upstream Tracking Process & Skill | `ws/003-upstream-tracking` | 🔵 Planning |
+| WS-001 | Fork Setup & Upstream Remote | `ws/001-fork-setup` | ⏸ Paused |
+| WS-002 | Strip China Platform Integrations | `ws/002-china-strip` | ✅ Complete |
+| WS-003 | Upstream Tracking Process & Skill | `ws/003-upstream-tracking` | ⏸ Paused |
 
 ## Active Missions
 | Mission | Title | Branch | Status |
@@ -80,8 +80,9 @@ open_items:
 
 ## Key Decisions (project-wide)
 | Date | Decision | Rationale |
-|------|----------|-----------|
-| | | |
+|------|----------|-----------| 
+| 2026-05-04 | Strip all 6 China platforms in one mission pass | Cleaner history; single diff to review before merge |
+| 2026-05-04 | Weekly upstream cron, not daily | Balance signal vs noise |
 
 ---
 
