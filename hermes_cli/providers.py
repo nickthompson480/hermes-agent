@@ -170,10 +170,6 @@ HERMES_OVERLAYS: Dict[str, HermesOverlay] = {
         transport="openai_chat",
         base_url_env_var="XIAOMI_BASE_URL",
     ),
-    "tencent-tokenhub": HermesOverlay(
-        transport="openai_chat",
-        base_url_env_var="TOKENHUB_BASE_URL",
-    ),
     "arcee": HermesOverlay(
         transport="openai_chat",
         base_url_override="https://api.arcee.ai/api/v1",
@@ -313,12 +309,6 @@ ALIASES: Dict[str, str] = {
     "mimo": "xiaomi",
     "xiaomi-mimo": "xiaomi",
 
-    # tencent
-    "tencent": "tencent-tokenhub",
-    "tokenhub": "tencent-tokenhub",
-    "tencent-cloud": "tencent-tokenhub",
-    "tencentmaas": "tencent-tokenhub",
-
     # bedrock
     "aws": "bedrock",
     "aws-bedrock": "bedrock",
@@ -356,7 +346,6 @@ _LABEL_OVERRIDES: Dict[str, str] = {
     "stepfun": "StepFun Step Plan",
     "xiaomi": "Xiaomi MiMo",
     "gmi": "GMI Cloud",
-    "tencent-tokenhub": "Tencent TokenHub",
     "lmstudio": "LM Studio",
     "local": "Local endpoint",
     "bedrock": "AWS Bedrock",
