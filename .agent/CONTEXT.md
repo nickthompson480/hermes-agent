@@ -82,7 +82,7 @@ open_items:
 | Date | Decision | Rationale |
 |------|----------|-----------| 
 | 2026-05-04 | Strip all 6 China platforms in one mission pass | Cleaner history; single diff to review before merge |
-| 2026-05-04 | Weekly upstream cron, not daily | Balance signal vs noise |
+| 2026-05-04 | Merged mission/001-china-strip to main | Human review approved; merged with --no-ff |
 
 ---
 
