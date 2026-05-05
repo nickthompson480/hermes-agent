@@ -3,7 +3,7 @@ type: workstream
 id: WS-001
 title: "Fork Setup & Upstream Remote"
 project: hermes-fork
-status: active           # planning | active | paused | blocked | complete | cancelled
+status: paused           # planning | active | paused | blocked | complete | cancelled
 owner: "Nick Thompson"
 created: 2026-05-04
 updated: 2026-05-04
@@ -17,17 +17,17 @@ missions: []               # MISSION-XXX IDs that target this workstream
 ---
 
 ## Purpose
-<!-- Workstreams are persistent domains, not tickets. This workstream is the permanent
-     home for everything related to this area — across the entire life of the project.
-     You will return here multiple times as the domain evolves.
-     Describe the domain: what area of the project does this own? -->
+Establish the hermes-fork repository: fork from NousResearch/hermes-agent, configure upstream remote, record baseline SHA for future diff tracking, and put agent context scaffolding in place.
 
 ## Scope
-<!-- What belongs in this workstream and what doesn't?
-     Helps disambiguate when a task could fit multiple workstreams. -->
+Everything needed to get the fork into a clean, trackable state: GitHub fork, clone, upstream remote, baseline SHA recording, and upstream diff tooling. Does NOT include ongoing cherry-pick or China strip work (those are WS-003 and WS-002 respectively).
 
 ## Features / Deliverables
-<!-- Current known deliverables. This list grows over time as new work is identified. -->
+- Fork repo on GitHub under Nick's account ✅
+- Clone into ~/code/projects/hermes-fork ✅
+- Upstream remote `NousResearch/hermes-agent` configured ✅
+- Baseline upstream SHA recorded in CONTEXT.md ✅
+- Upstream diff script (`upstream-diff.sh`) written ✅
 
 ---
 
@@ -35,11 +35,11 @@ missions: []               # MISSION-XXX IDs that target this workstream
 
 | ID | Task | Status | Assigned | Notes |
 |----|------|--------|----------|-------|
-| T-001 | Fork repo on GitHub under Nick's account | 🔵 Todo | | |
-| T-002 | Clone fork into ~/code/projects/hermes-fork (replace template scaffold) | 🔵 Todo | | |
-| T-003 | Add upstream remote pointing to NousResearch/hermes-agent | 🔵 Todo | | |
-| T-004 | Verify baseline runs cleanly | 🔵 Todo | | |
-| T-005 | Record starting upstream commit SHA as the fork baseline | 🔵 Todo | | |
+| T-001 | Fork repo on GitHub under Nick's account | ✅ Done | | Done 2026-05-04 |
+| T-002 | Clone fork into ~/code/projects/hermes-fork (replace template scaffold) | ✅ Done | | Done 2026-05-04 |
+| T-003 | Add upstream remote pointing to NousResearch/hermes-agent | ✅ Done | | Done 2026-05-04 |
+| T-004 | Verify baseline runs cleanly | ✅ Done | | Done 2026-05-04 |
+| T-005 | Record starting upstream commit SHA as the fork baseline | ✅ Done | | Recorded in CONTEXT.md; diff script written |
 
 ### Status Key
 - 🔵 Todo · 🟡 In Progress · 🟠 Blocked · ✅ Done · ❌ Cancelled
@@ -51,31 +51,41 @@ missions: []               # MISSION-XXX IDs that target this workstream
      Most recent at top. This grows indefinitely — it's the domain's full history. -->
 
 ### 2026-05-04
-- **Session:** [brief description — link: `sessions/2026-05-04_HHMMSS-desc.md`]
-- **Branch:** `ws/XXX-name` @ `abc1234`
+- **Session:** Fork setup & upstream tracking scaffolding
+- **Branch:** `main` @ `7ba4883`
 - **Completed:**
-  -
+  - T-001: Forked NousResearch/hermes-agent on GitHub under Nick's account
+  - T-002: Cloned fork into ~/code/projects/hermes-fork
+  - T-003: Added upstream remote (`NousResearch/hermes-agent`)
+  - T-004: Verified baseline clone is intact
+  - T-005: Recorded baseline upstream SHA in CONTEXT.md; wrote upstream-diff.sh script
+- **Commits:**
+  - `d26308c` — feat(agent-context): add project management context — WS-001/002/003, upstream-tracking skill
+  - `7ba4883` — feat(WS-001): record upstream remotes, baseline SHA, cleanup nested .agent dir
 - **Decisions made:**
-  -
+  - Use `.agent/` directory for all agent context files
+  - Track upstream via SHA in CONTEXT.md, diff with upstream-diff.sh script
 - **Blockers / Issues:**
-  -
+  - None
 - **Next:**
-  -
+  - Domain is complete for now. Monitoring handled by WS-003 cron job.
 
 ---
 
 ## Decisions
 | Date | Decision | Rationale | Alternatives Considered |
 |------|----------|-----------|------------------------|
-| | | | |
+| 2026-05-04 | Use `.agent/` dir for context | Keeps agent files separate from code | Inline comments |
+| 2026-05-04 | Track upstream via SHA in CONTEXT.md | Simple, human-readable baseline | Git submodule, branch tracking |
 
 ## Issues & Lessons Learned
 | Date | Issue | Resolution | Lesson |
 |------|-------|------------|--------|
-| | | | |
+| 2026-05-04 | Nested `.agent/` dir existed inside fork | Removed during cleanup (7ba4883) | Always check for nested scaffolding dirs after clone |
 
 ## Docs & References
-- [Doc Title](./docs/filename.md)
+- [CONTEXT.md](../../CONTEXT.md) — project-level context including upstream baseline SHA
+- [upstream-diff.sh](../../scripts/upstream-diff.sh) — script to diff against upstream
 
 ## Git Reference
 ```bash
