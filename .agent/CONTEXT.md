@@ -23,6 +23,16 @@ open_items:
 
 ---
 
+## Upstream Tracking
+- **Upstream:** `git@github.com:NousResearch/hermes-agent.git` (remote: `upstream`)
+- **Fork:** `git@github.com:nickthompson480/hermes-agent.git` (remote: `origin`)
+- **Fork Baseline SHA:** `a1bed18194ff1ee8de1bf3e81007ddba06b61042` (2026-05-04)
+- **upstream_last_reviewed:** `a1bed18194ff1ee8de1bf3e81007ddba06b61042`
+- **Upstream Diff Script:** `.agent/scripts/upstream-diff.sh`
+- **Triage Skill:** `.agent/skills/upstream-tracking.md`
+
+---
+
 ## Quick Links
 - [**→ Agent Quick Start**](./docs/AGENT_QUICKSTART.md) ← new agents read this first
 - [Project Spec](./PROJECT_SPEC.md)
