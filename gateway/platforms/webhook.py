@@ -206,9 +206,7 @@ class WebhookAdapter(BasePlatformAdapter):
         # Check both built-in names and plugin-registered platforms.
         _BUILTIN_DELIVER_PLATFORMS = {
             "telegram", "discord", "slack", "signal", "sms", "whatsapp",
-            "matrix", "mattermost", "homeassistant", "email", "dingtalk",
-            "feishu", "wecom", "wecom_callback", "weixin", "bluebubbles",
-            "qqbot", "yuanbao",
+            "matrix", "mattermost", "homeassistant", "email", "bluebubbles",
         }
         _is_known_platform = deliver_type in _BUILTIN_DELIVER_PLATFORMS
         if not _is_known_platform:

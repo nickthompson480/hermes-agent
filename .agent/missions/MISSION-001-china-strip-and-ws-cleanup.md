@@ -3,7 +3,7 @@ type: mission
 id: MISSION-001
 title: "China Strip & Workstream Cleanup"
 project: hermes-fork
-status: approved
+status: complete
 created: 2026-05-04
 updated: 2026-05-04
 branch: mission/001-china-strip
@@ -137,22 +137,22 @@ End state: the fork has zero China platform code, all workstream files accuratel
 
 | Task | Status | Commit | Agent | Notes |
 |------|--------|--------|-------|-------|
-| T-001 | | | | |
-| T-002 | | | | |
-| T-003 | | | | |
-| T-004 | | | | |
-| T-005 | | | | |
-| T-006 | | | | |
-| T-007 | | | | |
-| T-008 | | | | |
-| T-009 | | | | |
-| T-010 | | | | |
-| T-011 | | | | |
-| T-012 | | | | |
-| T-013 | | | | |
-| T-014 | | | | |
-| T-015 | | | | |
-| T-016 | | | | |
+| T-001 | ✅ Done | 9ba25d6 (main) | sonnet | WS-001 context update |
+| T-002 | ✅ Done | mission branch created | sonnet | |
+| T-003 | ✅ Done | 25b81d7 | sonnet | 13 adapter files removed |
+| T-004 | ✅ Done | dd5fab2 | sonnet | 3 tool files removed |
+| T-005 | ✅ Done | 6acdb47 | sonnet | TokenHub + 4 aliases removed |
+| T-006 | ✅ Done | cc87a5b | sonnet | dingtalk + feishu deps removed |
+| T-007 | ✅ Done | 2e7730e | sonnet | 19 test files removed |
+| T-008 | ✅ Done | c969abe | sonnet | config.py scrubbed |
+| T-009 | ✅ Done | 88179aa | sonnet | run.py scrubbed |
+| T-010 | ✅ Done | 22acd79 | sonnet | display_config + session scrubbed |
+| T-011 | ✅ Done | 7d13f1c | sonnet | __init__, webhook, send_message_tool cleaned |
+| T-012 | ✅ Done | 1f1fe07 | sonnet | WS-003 WORKSTREAM.md updated |
+| T-013 | ✅ Done | n/a (cron) | sonnet | Weekly cron job 2a98d31293a9 created |
+| T-014 | ✅ Done | d41be7a | sonnet | WS-002 WORKSTREAM.md updated |
+| T-015 | ✅ Done | (session commit) | sonnet | Session file + indexes + CONTEXT.md |
+| T-016 | ✅ Done | (push + Discord) | sonnet | Branch pushed, changelog posted |
 
 ## Git Summary (filled on completion)
 ```bash
@@ -161,10 +161,10 @@ git log --oneline --grep="MISSION-001"
 ```
 
 ## Outcome
-**Completed:** TBD
-**Session File:** `sessions/TBD`
-**Merged to:** pending human review
-**Result:** TBD
+**Completed:** 2026-05-04
+**Session File:** `sessions/2026-05-04_200000-mission-001-china-strip.md`
+**Merged to:** pending human review of `git diff main...mission/001-china-strip`
+**Result:** Full success — all 16 tasks completed. Zero China platform code remains in the fork.
 
 ### Follow-on Work
 | Item | Route To | Notes |
