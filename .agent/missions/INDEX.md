@@ -15,7 +15,7 @@ Lifecycle: `draft → reviewed → approved → running → complete | failed | 
 ## Active Missions
 | ID | Title | Status | Workstreams | Reviewer | Executor |
 |----|-------|--------|-------------|----------|----------|
-| _(none)_ | | | | | |
+| MISSION-001 | China Strip & Workstream Cleanup | running | WS-001, WS-002, WS-003 | self | sonnet |
 
 ## Completed Missions
 | ID | Title | Completed | Session File |
